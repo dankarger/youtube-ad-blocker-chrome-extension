@@ -1,0 +1,26 @@
+{
+  "name": "Ad-Blocker-V1",
+  "description": "Ad-Blocker-V1",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [ ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "/images/get_started16.png",
+    "32": "/images/get_started32.png",
+    "48": "/images/get_started48.png",
+    "128": "/images/get_started128.png"
+  }
+
+}
