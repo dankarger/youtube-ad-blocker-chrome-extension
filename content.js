@@ -1,7 +1,14 @@
-setInterval(()=>{
+setInterval(() => {
     const skipButton = document.querySelector('.ytp-ad-skip-button');
-    if(skipButton !== null) {
-        console.log('ad detected ')
-        skipButton.click()
+    const adOverlayCloseButton = document.querySelector('.ytp-ad-overlay-close-button');
+    if (skipButton !== null) {
+        console.log('ad detected ');
+        skipButton.click();
     }
-},200)
+    if (adOverlayCloseButton !== null) {
+        console.log('overlay detected');
+        adOverlayCloseButton.click();
+    }
+}, 300)
+
+
